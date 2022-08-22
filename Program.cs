@@ -27,6 +27,7 @@ void WriteArray(int[] array)
 int QuantityPositive(int[] array)
 {
     int quantity = 0;
+    
     for (int i = 0; i<array.Length; i++ )
     {
         if (array[i] % 2 == 1)
@@ -38,7 +39,9 @@ int QuantityPositive(int[] array)
 }
 
 FillArray(numbers, 100, 1000);
+
 WriteArray(numbers);
+
 Console.WriteLine();
 
 int quantity = QuantityPositive(numbers);
@@ -50,7 +53,6 @@ Console.WriteLine($"Количество чётных чисел в массив
 
 
 Console.WriteLine($"\nЗадача 36. Сумма элементов, стоящих на нечётных позициях:\n");
-
 Console.Write($"Введи количество элементов массива: ");
 
 int numberElements = Convert.ToInt32(Console.ReadLine()); 
@@ -58,7 +60,9 @@ int numberElements = Convert.ToInt32(Console.ReadLine());
 int RandomNumbers(int numberElements, int min, int max)
 {
   int[] randomNumbers = new int[numberElements];
+  
   int sumElements = 0;
+  
   Console.Write("Получившийся массив: ");
 
     for (int i = 0; i <randomNumbers.Length; i++ )
@@ -67,7 +71,7 @@ int RandomNumbers(int numberElements, int min, int max)
 
         Console.Write(randomNumbers[i] + " ");
 
-        if (i % 2 != 1)
+    if (i % 2 != 1)
         {
             sumElements = sumElements + randomNumbers[i];
         }
